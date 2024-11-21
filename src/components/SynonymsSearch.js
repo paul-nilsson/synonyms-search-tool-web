@@ -62,7 +62,13 @@ export default class SynonymsSearch extends React.Component {
         const { synonyms, word, feedback, activePanel } = this.state; // Destructure state for convenience
 
         return (
-            <div className="relative bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-lg sm:rounded-lg sm:px-10">
+            <div className="relative flex min-h-screen flex-col overflow-hidden bg-gray-200 pb-6">
+                <div class="bg-sky-500 w-full">
+                    <div class="px-6 max-w-screen-lg ">
+                        <h1 class="text-white p-6 text-2xl font-bold">Synonyms Search Tool</h1>
+                    </div>
+                </div>
+                <div className="relative bg-white mt-6 px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-lg sm:rounded-lg sm:px-10">
                 {/* Panel for Search Input and Button */}
                 {activePanel === 'search' && (
                     <div className="mx-auto max-w-md sm:w-96">
@@ -111,15 +117,15 @@ export default class SynonymsSearch extends React.Component {
                 {/* Panel for Synonyms Result */}
                 {activePanel === 'search' && synonyms && synonyms.length > 0 && (
                     <div className="bg-gray-100 p-6 rounded-lg shadow-lg pt-6 mt-6">
-                        <h4 className="font-semibold text-xl text-gray-800 mb-4">Results for "<span className="text-blue-600">{word}</span>"</h4>
+                        <h4 className="font-semibold text-xl text-gray-800 mb-4">Results for "<span className="text-sky-00">{word}</span>"</h4>
 
-                        <div className="flex flex-wrap gap-2">
+                        <div>
                             {/* Display the list of synonyms */}
                             {synonyms.map((synonym, index) => (
-                                <div key={index} className="flex items-center">
+                                <div key={index}>
                                     {/* Link to search for each synonym */}
                                     <button
-                                        className="text-blue-600 hover:text-blue-800 text-lg font-medium bg-transparent border-none cursor-pointer"
+                                        className="text-sky-500 hover:text-sky-600 text-lg font-medium bg-transparent border-none cursor-pointer"
                                         onClick={(e) => {
                                             e.preventDefault();
                                             this.handleSearch(synonym); 
@@ -127,10 +133,6 @@ export default class SynonymsSearch extends React.Component {
                                     >
                                         {synonym}
                                     </button>
-                                    {/* Add a separator if not the last synonym */}
-                                    {index < synonyms.length - 1 && (
-                                        <span className="text-gray-500">, </span>
-                                    )}
                                 </div>
                             ))}
                         </div>
@@ -151,6 +153,7 @@ export default class SynonymsSearch extends React.Component {
                         </button>
                     </div>
                 )}
+                </div>
             </div>
         );
     }
