@@ -66,7 +66,7 @@ export default class SynonymsSearch extends React.Component {
                 {/* Panel for Search Input and Button */}
                 {activePanel === 'search' && (
                     <div className="mx-auto max-w-md sm:w-96">
-                        <h4 className="text-3xl font-bold p-2">Search for Synonyms</h4>
+                        <h4 className="text-2xl pb-2">Search for Synonyms</h4>
                         {/* Display feedback message if any */}
                         {feedback && (
                             <div
@@ -82,7 +82,7 @@ export default class SynonymsSearch extends React.Component {
                                 type="text"
                                 className="mt-2 w-full h-12 rounded-md border border-gray-300 shadow-sm focus:border-sky-500 focus:ring-2 focus:ring-sky-500 sm:text-base placeholder-gray-400 pl-4"
                                 id="search-word"
-                                placeholder="Search for synonyms..."
+                                placeholder="Search word..."
                                 value={word} // Bind value to state
                                 onChange={(e) => this.setState({ word: e.target.value })} // Update word on change
                                 onFocus={this.clearFeedback} // Clear feedback when focusing on input

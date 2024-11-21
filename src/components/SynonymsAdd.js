@@ -73,7 +73,7 @@ export default class SynonymsAdd extends React.Component {
     render() {
         return (
             <div className="mx-auto max-w-md sm:w-96">
-                <h4 className="text-3xl font-semibold p-2">Add Synonyms</h4>
+                <h4 className="text-2xl pb-2">Add Synonyms</h4>
                 {/* Show the message if there is one (success, error, or warning) */}
                 {this.state.message && (
                     <div className={`p-3 mb-3 rounded-lg text-white ${this.state.messageType === "success" ? "bg-green-500" : this.state.messageType === "error" ? "bg-red-500" : "bg-yellow-500"}`} role="alert" >
