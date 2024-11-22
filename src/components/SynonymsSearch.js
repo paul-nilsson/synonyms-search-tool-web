@@ -63,9 +63,9 @@ export default class SynonymsSearch extends React.Component {
 
         return (
             <div className="relative flex min-h-screen flex-col overflow-hidden bg-gray-200 pb-6">
-                <div class="bg-sky-500 w-full">
-                    <div class="px-6 max-w-screen-lg ">
-                        <h1 class="text-white p-6 text-2xl font-bold">Synonyms Search Tool</h1>
+                <div className="bg-sky-500 w-full">
+                    <div className="px-6 max-w-screen-lg ">
+                        <h1 className="text-white p-6 text-2xl font-bold">Synonyms Search Tool</h1>
                     </div>
                 </div>
                 <div className="relative bg-white mt-6 px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-lg sm:rounded-lg sm:px-10">

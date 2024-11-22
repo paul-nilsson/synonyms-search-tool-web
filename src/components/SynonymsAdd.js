@@ -112,7 +112,7 @@ export default class SynonymsAdd extends React.Component {
                     {/* Submit button */}
                     <div className="mt-6 flex justify-end">
                         <button type="submit" className="inline-flex items-center rounded-md bg-green-500 px-6 py-3 text-sm font-medium text-white shadow-sm hover:bg-green-600 focus:outline-none" >
-                            Add Synonyms
+                            Add
                         </button>
                     </div>
                 </form>
